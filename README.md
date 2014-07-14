@@ -1,21 +1,19 @@
-Privacy Badger
-===================
-Privacy Badger blocks spying ads and invisible trackers. It's there to ensure that companies can't track your browsing without your consent.
+Privacy Butler
 
-This extension is designed to automatically protect your privacy from third party trackers that load invisibly when you browse the web. We send the Do Not Track header with each request, and our extension evaluates the likelihood that you are still being tracked. If the algorithm deems the likelihood is too high, we automatically block your request from being sent to the domain. Please understand that Privacy Badger is in beta, and the algorithm's determination is not conclusive that the domain is tracking you.
+Privacy Butler is a research project at the Oxford Internet Institute. The tool is designed to give privacy predictively, based on past actions and actions of similar users. The Privacy Butler client is a modified version of ELectronic Frontier Foundation's Privacy Badger, which implements blocking heuristically.  Following Privacy Badger, the tool first sends Do-Not-Track request headers and then evaluates the probability that the third party script is continuing to track you. If the likelihood, determine by the algorith, is sufficiently high, the tool blocks the tracker. Additionally, EFF also maintains a whitelist of domains that are known to add useful functions to web sites, and in cases where blocking is likely to result in broken features, the tool limits itself to blocking the cookies.
 
-Our extension has three states. Red means Privacy Badger believes this domain is a tracker, and has blocked it. Yellow means the domain is believed to be both a tracker and necessary for the functioning of the page, so Privacy Badger is allowing it but blocking its cookies. Green means that Privacy Badger believes this is not tracker. You can click on the Privacy Badger icon in your browser's toolbar if you wish to override the automatic blocking settings. Or, you can browse in peace as Privacy Badger starts finding and eating up web trackers one by one.
+Privacy Butler modifies EFF's code in two ways. First, it implements a different UI that emphasizes the choices the user makes about how much privacy they want on each website. Unlike other tools, it's focus is on the data (which may or may not be "sensitive") and not on the trackers. It gives the user four choices to indicate levels of concern ("Don't care", "Fine, but no tracking", "No one should know", and "NO ONE") and then implements gradations of privacy protection in response.
 
-Nothing can stop the Privacy Badger from eating cookies when it's hungry!
+If the user chooses "Don't Care," Privacy Butler allows tracking to occur. If the user chooses "Fine, but no tracking", Privacy Butler runs Privacy Badger as originally implemented in the alpha version. If the user chooses "No one should know", Privacy BUtler runs a modified version that blocks all third party domains. Last, if the user chooses "NO ONE", Privacy BUtler runs Badger and warns the user to use a VPN.
 
-Privacy Badger is a project of the Electronic Frontier Foundation.
 
-##Developing
-To build a local dummy .crx you can install with Chrome's stupid magic ritual,
-run `make`
+Privacy Butler saves the user's choices and sends them to a prediction server under an anonymous user if, which currently only saves the data in a SQL database. As more data is gathered, a model will be trained and the user will have the choice to receive predicted privacy protection, in addition to the ones they set themselves.
 
-Or for an even easier build enable developer mode in chrome://extensions, hit
-the "load unpacked extension" button and load up this driectory
+
+Technical Notes:
+
+At it's heart, Privacy Butler is Adblock Plus, focused around adblockplus.lib, run with EFF's heuristic blocking, found in heuristicblocking.js and webrequest.js, which implements the actual blocking. Privacy Butler modifications can be found in background.js and popup,js, where the user choice is implemented via the logic above. These choices are saved, retrieved, and sent to the server in userchoices.js.
+
 
 ##License
-Privacy Badger is licensed under the GPLv3. See LICENSE for more details
+Privacy Butler is licensed under the GPLv3, as are Privacy Badger and Adblock PLus, which also hold licenses.
