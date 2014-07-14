@@ -1,0 +1,90 @@
+<!--
+  - This file was part of Adblock Plus <http://adblockplus.org/>,
+  - Copyright (C) 2006-2013 Eyeo GmbH
+
+  - Modified for Privacy Badger
+  - Copyright (C) 2013- Electronic Frontier Foundation & others
+
+  -
+  - Adblock Plus is free software: you can redistribute it and/or modify
+  - it under the terms of the GNU General Public License version 3 as
+  - published by the Free Software Foundation.
+  -
+  - Adblock Plus is distributed in the hope that it will be useful,
+  - but WITHOUT ANY WARRANTY; without even the implied warranty of
+  - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  - GNU General Public License for more details.
+  -
+  - You should have received a copy of the GNU General Public License
+  - along with Adblock Plus.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" href="/lib/jquery-ui/css/smoothness/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+<link type="text/css" media="screen" href="/skin/popup.css" rel="stylesheet" /> 
+<link type="text/css" media="screen" href="/skin/toggle-switch.css" rel="stylesheet" /> 
+<script type="text/javascript" src="/lib/jquery-ui/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="/lib/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="/lib/i18n.js"></script>
+<script type="text/javascript" src="/src/popup.js"></script>
+
+</head>
+<body id="main">
+
+<div id='logo'><center><img style='width: 90%', src='/skin/logo.png'></center>
+</div>
+
+<!-- In soviet EFF extension, popup clicks you. -->
+<div id="mustReloadMsg" style="display:none"><span class="i18n_new_filters_added"></span></div>
+
+
+<br>
+
+<div id="startingQuestion">
+  <p id="pbInstructions"> How Much Do You Care if Others Know That You Were on This Website?</p>
+</div>
+
+<br>
+
+<div id="responses">
+<div id="DontCareResponse">
+  <p id="pbInstructions"> The Butler kept everything as is. Many websites can now remain free and able to provide their service.</p>
+</div>
+
+<div id="SortofCareResponse">
+  <p id="pbInstructions"> The Butler blocked the content that is most likely tracking you. You can still control individual settings, but you can feel safe that you are . </p>
+</div>
+
+<div id="CareResponse">
+  <p id="pbInstructions"> The Butler disabled all possible trackers. If something broke, you can still control individual settings.</p>
+ </div>
+ 
+ <div id="ReallyCareResponse">
+  <p id="pbInstructions"> We recommend enabling a virtual private network (VPN). A VPN hides your IP address, so that no one can know where you're coming from or tie you back to your identity. A few good ones are <a href="https://www.privateinternetaccess.com/">Private Internet Access</a> and <a href="https://www.cyberghostvpn.com/">Cyber Ghost</a>. </p>
+</div>
+
+</div>
+<div id="blockedResourcesContainer">
+  <p id="pbInstructions"> Your Butler is using Electronic Frontier Foundation's Privacy Badger to disable tracking. You can control what is left unblocked, and you can read about EFF's policy <a href="https://eff.org/prile=">here</a></p>
+  <div class="spacer"></div>
+  <br>
+  <div id="blockedResources">Loading...</div>
+</div>
+<br>
+<div id="siteControls">
+<center><button id="Dont_Care_btn" class="control-button grey-button" style="display:"> Not a big deal. </button></center>
+<center><button id="Sort_of_Care_btn" class="control-button grey-button" style="display:"> Fine, but no tracking. </button></center>
+<center><button id="Care_btn" class="control-button grey-button" style="display:"> No one should know. </button></center>
+<center><button id="Really_Care_btn" class="control-button grey-button" style="display:"> NO ONE. </button></center>
+</div>
+<div class='clear'></div>
+<center><button id="Nuance_btn" class="nuance-button" style="display:"> Give me Control </button></center>
+
+<div id="footer">
+<input type="checkbox" name="checkboxG5" id="checkboxG5" class="css-checkbox" checked="unchecked" /><label for="checkboxG5" class="css-label">Prediction not enabled in Alpha version. </label>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<!--
+	--This file is part of Privacy Butler <privacybutler.com>
+	--Copyright (C) 2014- Olga Musayev & others
+	-
+	--Privacy Butler is free software: you can redistribute it and/or modify
+  - it under the terms of the GNU General Public License version 3 as
+  - published by the Free Software Foundation.
+  -
+  - Privacy Butler is distributed in the hope that it will be useful,
+  - but WITHOUT ANY WARRANTY; without even the implied warranty of
+  - MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  - GNU General Public License for more details.
+  -
+  - You should have received a copy of the GNU General Public License
+  - along with Adblock Plus.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+  <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link type="text/css" href="/lib/jquery-ui/css/smoothness/jquery-ui-1.10.4.custom.css" rel="stylesheet" />
+<link type="text/css" media="screen" href="/skin/popup.css" rel="stylesheet" /> 
+<link type="text/css" media="screen" href="/skin/toggle-switch.css" rel="stylesheet" /> 
+<script type="text/javascript" src="/lib/jquery-ui/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="/lib/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="/lib/i18n.js"></script>
+<script type="text/javascript" src="/src/popupprediction.js"></script>
+
+</head>
+<body id="main">
+
+<div id='logo'><center><img style='width: 75%', src='/skin/logo.png'></center>
+</div>
+
+<!-- In soviet EFF extension, popup clicks you. -->
+<div id="mustReloadMsg" style="display:none"><span class="i18n_new_filters_added"></span></div>
+
+
+<br>
+
+<div id="Prediction">
+  <p> Privacy Butler believes that you really care that others know that you visited this website, and has set the privacy protection to maximum. Is this correct? (P.S. You're hopefully using a VPN...)</p>
+</div>
+
+<div id="afterYESresponse">
+  <p>The butler feels very proud for a job well done.<p>
+</div>
+
+<div id="afterNOresponse">
+  <p>The butler feels ashamed. If you give him more answers, the Butler will likely do better in the future.<p>
+</div>
+
+<br>
+<div id="blockedResourcesContainer">
+  <p> You can control the level of blocking here, and you can read about EFF's policy <a href="https://www.eff.org/privacybadger">here</a></p>
+  <div class="spacer"></div>
+  <br>
+  <div id="blockedResources">Loading...</div>
+</div>
+<br>
+<div id="answers">
+<center><button id="answ_yes" class="control-button grey-button" style="display:"> Yes! </button></center>
+<center><button id="answ_maybe" class="control-button grey-button" style="display:"> Maybe. Give me a detailed look. </button></center>
+<center><button id="answ_no" class="control-button grey-button" style="display:"> No! </button></center>
+</div>
+
+</body>
+</html>
+

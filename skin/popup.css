@@ -1,0 +1,316 @@
+/*
+ * This file is part of Privacy Badger <https://eff.org/privacybadger>
+ * Copyright (C) 2014 Electronic Frontier Foundation
+ *
+ * Privacy Badger is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3 as
+ * published by the Free Software Foundation.
+ *
+ * Privacy Badger is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Privacy Badger.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+body {
+  font-size: 18px;
+  min-width: 385px;
+  background: #fefefe;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a { text-decoration: none }
+a:hover { color: #eeeeff }
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   
+}
+
+#filtersList {
+  border: 1px dotted gray;
+  padding: 1px;
+  font-size: 75%;
+  display: none;
+}
+
+.ui-button {
+    padding: 3px;
+}
+
+.spacer {
+  height: 7px;
+  width: 5px;
+  display: block;
+}
+#supQuest{
+color: #4183c4;
+border-bottom; 1px dotted #4183c4;
+}
+
+.click-nav ul {position:relative;font-weight:900;list-style-type:none;}
+.click-nav ul li {position:relative;list-style:none;cursor:pointer;}
+.click-nav ul li ul {position:relative;}
+.click-nav ul .clicker {position:relative;background:#2284B5;color:#FFF;}
+.click-nav ul .clicker:hover,.click-nav ul .active {background:#196F9A;}
+.click-nav .imglink img {position:absolute;top:9px;left:12px;}
+.click-nav ul li a {transition:background-color 0.2s ease-in-out;-webkit-transition:background-color 0.2s ease-in-out;
+-moz-transition:background-color 0.2s ease-in-out;display:block;padding:8px 10px 8px 40px;background:#FFF;color:#333;text-decoration:none;}
+.click-nav ul li a:hover {background:#F2F2F2;}
+/*.click-nav ul .block {background:#FF0000;}
+.click-nav ul .block:hover {background:#BE2625;}
+.click-nav ul .cookieblock {background:#FFF200; color:black}
+.click-nav ul .cookieblock:hover {background:#FFF79A; color:black}
+.click-nav ul .greyed {background:#C0C0C0; color:gray}
+.click-nav ul .greyed:hover {background:#E0E0E0; color:gray} */
+.click-nav ul .userset {background-image:url('/skin/lock.png');background-repeat:no-repeat;background-position: right center;} 
+.clicker{
+  border-top: 1px solid #aaaaaa;
+  padding: 5px;
+  height: 40px;
+  overflow: hidden;
+}
+.clicker.greyed { background: #aaa; }
+.origin{
+  width: 60%;
+  color: #555555;
+  float: left;
+  display: inline;
+}
+.switch-container{
+  width: 30%;
+  float: right;
+  display: inline;
+  position: relative;
+  right: 18px;
+}
+.clear{
+  clear: both;
+}
+.switch-candy a img{
+  width: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.block .switch-candy a {
+  background-color: #c61223;
+}
+.cookieblock .switch-candy a{
+  background-color: #ffcc00;
+}
+.noaction .switch-candy a{
+  background-color: #339900;
+}
+.honeybadgerPowered{
+  width: 20px;
+  height: 20px;
+  display: inline;
+  float: right;
+  position: relative;
+  right: -116px;
+  cursor: pointer;
+}
+.userset .honeybadgerPowered{
+  background: url('/icons/badger-pin.png') no-repeat;
+}
+.tooltipContainer{
+display: none;
+clear: both;
+color: #fcfcfc;
+font-size: 12px;
+background-color: #555;
+height: 12px;
+border-radius: 7px;
+padding: 3px;
+margin-top: 8px;
+}
+.tooltipArrow{
+  position: relative;
+  top: 8px;
+  right: 212px;
+  display: none;
+}
+#privacyBadgerHeader{
+color: #505050;
+font-size: 16px;
+}
+#privacyBadgerHeader h2{
+  margin-left: 7px;
+  display: inline;
+  float: left;
+  color: #454545;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+#responses{
+  font-size: 18px;
+  min-width: 385px;
+  background: #fefefe;
+  color: #333;
+  font-family: 'Bitter', serif;
+ }
+#privacyBadgerHeader img{
+  display: inline;
+  float: left;
+}
+#helplink {
+  padding-top: 5px;
+  color: #4183c4;
+}
+#thirdPartyCookiesError {
+  background-color: #f00;
+  color: #f0f0f0;
+}
+.ui-slider {
+  opacity: 0;
+  z-index: 20;
+}
+.ui-slider a.ui-slider-handle {
+  cursor: move;
+}
+#siteControls {
+  margin-bottom: 5px;
+}
+#pbInstructions{
+  margin: -5 0 -5 40px;
+  margin-right: 40px;
+  z-index: 20;
+  font-size: 22px;
+  font-family: 'Open Sans', sans-serif;
+}
+#blockedResources{
+  max-height: 416px;
+  overflow-y: auto;
+}
+
+button {
+    background: none repeat scroll 0 0 #007295;
+    border: medium none;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+	border-radius:10px;
+	cursor:pointer;
+	   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 14px 28px;
+   -webkit-border-radius: 30px;
+   -moz-border-radius: 30px;
+   border-radius: 30px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+}
+button:hover{background:#0082AC;}
+.nuance-button {
+    float: right;
+	display: inline-block;
+    background: #f5513c;
+    -webkit-box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+    -moz-box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+    box-shadow: 0px 1px 0px 0px #ff8272 inset, 0px 0px 0px 4px #e6e6e6;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: all 0s 0;
+    -moz-transition: all 0s 0;
+    -o-transition: all 0s 0;
+    transition: all 0s 0;
+    text-shadow: 0px 1px 1px #9c3528;
+    padding: 6px 30px;
+    border-color: #ec513c;
+    border-width: 1px;
+    border-style: solid;
+    font-family: Arial, Helvetica, Sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.nuance-button:hover {
+    background: #ff6551;
+    -webkit-box-shadow: 0px 0px 0px 4px #ffbfab;
+    -moz-box-shadow: 0px 0px 0px 4px #ffbfab;
+    box-shadow: 0px 0px 0px 4px #ffbfab;
+    border-color: #ed5e4b;
+}
+
+/*
+input[type=checkbox].css-checkbox { 
+	position: absolute;  
+	overflow: hidden;  
+	clip: rect(0 0 0 0);  
+	height:1px;  width:1px;  
+	margin:-1px;  
+	padding:0; 
+	border:0; 
+}  
+	
+input[type=checkbox].css-checkbox + label.css-label { 
+	padding-left:20px; 
+	height:20px;  
+	display:inline-block; 
+	line-height:20px; 
+	background-repeat:no-repeat; 
+	background-position: 0 0; 
+	font-size:15px; 
+	vertical-align:middle; 
+	cursor:pointer; 
+}  
+	
+input[type=checkbox].css-checkbox:unchecked + label.css-label { 
+	background-position: 0 -20px; 
+}  
+
+.css-label{ 
+	background-image:url(http://csscheckbox.com/checkboxes/web-two-style.png); }
+*/	
+	
+input[type=checkbox].css-checkbox {
+			display:none;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:33px;
+	height:28px; 
+	display:inline-block;
+	line-height:28px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:20px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:unchecked + label.css-label {
+	background-position: 0 28px;
+	}
+
+label.css-label {
+	background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_3bc33c197ddcf1c42f3532ffb1adeeb7.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	}
+
+   
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
